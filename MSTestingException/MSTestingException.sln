@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTestingException", "MSTestingException\MSTestingException.csproj", "{838E55A9-1F8F-44FD-B46C-239BC2BD65A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uc1-refactor-tc1.1-moodanalyser", "uc1-refactor-tc1.1-moodanalyser\uc1-refactor-tc1.1-moodanalyser.csproj", "{A653A64D-BD6E-4FE7-B29B-12640104A046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodAnalyze_Testing", "MoodAnalyze_Testing\MoodAnalyze_Testing.csproj", "{8FCAD8EE-F20F-4BD2-ABBB-0F1FAA181750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uc1-refactor-tc1.2moodanalyser", "uc1-refactor-tc1.2moodanalyser\uc1-refactor-tc1.2moodanalyser.csproj", "{9A8C9EF3-4109-4591-BED0-97DC971666D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uc1-tc1.2moodanalyser", "uc1-tc1.2moodanalyser\uc1-tc1.2moodanalyser.csproj", "{F613CAF1-9E35-4808-A100-0AAFF36FF20B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{838E55A9-1F8F-44FD-B46C-239BC2BD65A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838E55A9-1F8F-44FD-B46C-239BC2BD65A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838E55A9-1F8F-44FD-B46C-239BC2BD65A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838E55A9-1F8F-44FD-B46C-239BC2BD65A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A653A64D-BD6E-4FE7-B29B-12640104A046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A653A64D-BD6E-4FE7-B29B-12640104A046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A653A64D-BD6E-4FE7-B29B-12640104A046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A653A64D-BD6E-4FE7-B29B-12640104A046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCAD8EE-F20F-4BD2-ABBB-0F1FAA181750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCAD8EE-F20F-4BD2-ABBB-0F1FAA181750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCAD8EE-F20F-4BD2-ABBB-0F1FAA181750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCAD8EE-F20F-4BD2-ABBB-0F1FAA181750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8C9EF3-4109-4591-BED0-97DC971666D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8C9EF3-4109-4591-BED0-97DC971666D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8C9EF3-4109-4591-BED0-97DC971666D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8C9EF3-4109-4591-BED0-97DC971666D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F613CAF1-9E35-4808-A100-0AAFF36FF20B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F613CAF1-9E35-4808-A100-0AAFF36FF20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F613CAF1-9E35-4808-A100-0AAFF36FF20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F613CAF1-9E35-4808-A100-0AAFF36FF20B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36E622BD-0780-48DB-9A8C-57F6434A2A5F}
+	EndGlobalSection
+EndGlobal
