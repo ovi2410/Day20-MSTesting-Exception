@@ -1,19 +1,20 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MSTestingException;
 
-namespace MoodAnalyze_Testing
+
+namespace MoodAnalyse_Testing
 {
     [TestClass]
     public class UnitTest1
     {
         private MoodAnalyzer moodAnalyzer;
-        
+
         [TestMethod]
         public void GivenSadMood_shouldReturn_SAD() //Test method
         {
             // >> Arrange
-            string expected = "SAD";
-            string message = "I am in Sad Mood";
+            string expected = "HAPPY";
+            string message = "I am in HAppy Mood";
             moodAnalyzer = new MoodAnalyzer(message);
 
             // >> Act
@@ -25,5 +26,4 @@ namespace MoodAnalyze_Testing
         }
 
     }
-    
 }
