@@ -1,29 +1,30 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MSTestingException;
 
-
-namespace MoodAnalyse_Testing
+namespace MoodAnalyze_Testing
 {
     [TestClass]
     public class UnitTest1
     {
         private MoodAnalyzer moodAnalyzer;
 
-        [TestMethod]
-        public void GivenSadMood_shouldReturn_SAD() //Test method
+        public UnitTest1()
         {
-            // >> Arrange
-            string expected = "HAPPY";
-            string message = "I am in HAppy Mood";
-            moodAnalyzer = new MoodAnalyzer(message);
-
-            // >> Act
-            string Result = moodAnalyzer.AnalyzeMood();
-
-            // >> Assert
-            Assert.AreEqual(expected, Result);
-
+            moodAnalyzer = new MoodAnalyzer();
         }
 
+        [TestMethod]
+        public void TestMethod1()
+        {
+            // >> arrange
+            moodAnalyzer = new MoodAnalyzer();
+            // >> Act
+            var Result = moodAnalyzer.AnalyzeMood("I am in Sad Mood");
+            // >> Assert
+            Assert.AreEqual(Result, "SAD");
+
+
+
+        }
     }
 }
