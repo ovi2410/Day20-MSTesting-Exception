@@ -2,35 +2,34 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MSTestingException;
 
 namespace MoodAnalyze_Testing
-{
+{ 
     [TestClass]
-    public class UnitTest1
+  public class UnitTest1
+  {
+    private MoodAnalyzer moodAnalyzer;
+
+    /// <summary>
+    /// UC5.1 => Using Reflection return moodanalyzer object
+    /// </summary>
+    [TestMethod]
+    public void Reflection_withCorrectclassName_CorrectConstrutorName_ReturnsMoodAnalyzerObj()
     {
-        private MoodAnalyzer moodAnalyzer;
-
-        /// <summary>
-        /// UC5.1 => Using Reflection return moodanalyzer object
-        /// </summary>
-        [TestMethod]
-        public void Reflection_withCorrectclassName_CorrectConstrutorName_ReturnsMoodAnalyzerObj()
+        string Message = "I am in Sad Mood";
+        MoodAnalyzer expected = new MoodAnalyzer(Message);
+        object actual = null;
+        try
         {
-            string Message = "I am in Sad Mood";
-            MoodAnalyzer expected = new MoodAnalyzer(Message);
-            object actual = null;
-            try
-            {
 
-                //Here We have CreateMoodAnalyzerObject static method 
-                actual = MoodAnalyzerFactory.CreateObjectOfPramMoodAnalyzer("Day_20_MsTesting_Exceptiions.MoodAnalyzer", "MoodAnalyzer", Message);
+            //Here We have CreateMoodAnalyzerObject static method 
+            actual = MoodAnalyzerFactory.CreateObjectOfPramMoodAnalyzer("Day_20_MsTesting_Exceptiions.MoodAnalyzer", "MoodAnalyzer", Message);
 
-            }
-            catch (MoodAnalyzer_CustomException e)
-            {
-                throw new System.Exception(e.Message); //throwing Exception
-            }
-            actual.Equals(expected);
         }
-
+        catch (MoodAnalyzer_CustomException e)
+        {
+            throw new System.Exception(e.Message); //throwing Exception
+        }
+        actual.Equals(expected);
+    }
         /// <summary>
         /// UC 5.2 => Using Reflection_passsing Wrong class NAme_throw Custome Exception
         /// </summary>
@@ -54,7 +53,6 @@ namespace MoodAnalyze_Testing
         /// <summary>
         /// UC 5.3 => Using Reflection_passingWrongContructorName_throw Custome Exception
         /// </summary>
-
         [TestMethod]
         public void Using_Relection_Paasing_WrongConstructorName_Throws_Exception_ConstructorNOtFound()
         {
@@ -71,6 +69,44 @@ namespace MoodAnalyze_Testing
                 Assert.AreEqual(e.Message, expected);
             }
         }
+        /// <summary>
+        /// UC 6.1 => Using Reflection_passingProperMessage_Return_Happy Mood
+        /// </summary>
 
-    }
+        [TestMethod]
+        public void Using_Relection_Paasing_ProperMessage_IaminHappyMood_Return_HAPPY()
+        {
+            string expected = "HAPPY";
+
+            //Here We have CreateMoodAnalyzerObject static method 
+            object actual = MoodAnalyzerFactory.Invoking_MoodAnalyzer_AnalyzeMood_Methd("I am in Happy Mood", "AnalyzeMood");
+            Assert.AreEqual(actual, expected);
+
+        }
+
+        /// <summary>
+        /// UC 6.2 => Using Reflection_passingImProperMethodNAme_Throw_CustomeException
+        /// </summary>
+
+        [TestMethod]
+        public void Using_Relection_Paasing_ImProperMethodName_Throw_CustomeException()
+        {
+            string message = "HAPPY";
+            string expected_Exception = "Method Not Found!!";
+            try
+            {
+                //Here We have CreateMoodAnalyzerObject static method 
+                object actual = MoodAnalyzerFactory.Invoking_MoodAnalyzer_AnalyzeMood_Methd("I am in Happy Mood", "Fake_AnalyzeMood");
+                Assert.AreEqual(actual, message);
+
+            }
+            catch (MoodAnalyzer_CustomException e)
+            {
+                Assert.AreEqual(expected_Exception, e.Message);
+            }
+
+
+        }
+
+  }
 }
