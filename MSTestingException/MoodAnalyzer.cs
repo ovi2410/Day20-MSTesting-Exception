@@ -1,5 +1,4 @@
-﻿using MSTestingException;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +10,10 @@ namespace MSTestingException
     {
         private string message; //declaring the private string type instance/global variable
 
+        public MoodAnalyzer()
+        {
+            //Default constructor
+        }
         public MoodAnalyzer(string message) // parameterized constructor
         {
             this.message = message;  // initiallizing the instance variable
@@ -43,8 +46,3 @@ namespace MSTestingException
 
     }
 }
-
-
-
-
-
