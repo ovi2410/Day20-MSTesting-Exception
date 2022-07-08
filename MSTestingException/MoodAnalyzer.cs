@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MSTestingException;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,12 @@ namespace MSTestingException
         {
             try
             {
-                if (this.message.ToLower().Contains("sad"))
+                if (this.message.Equals(string.Empty))
+                {
+                    throw new MoodAnalyzer_CustomException(MoodAnalyzer_CustomException.ExceptionType.EMPTY_MESSAGE, "Message Should Not Be EMPTY!!");
+                }
+
+                if (this.message.ToLower().Equals("sad"))
                 {
                     return "SAD";
                 }
@@ -28,12 +34,17 @@ namespace MSTestingException
                     return "HAPPY";
                 }
             }
-            catch
+            catch (NullReferenceException)
             {
-                return "HAPPY";
+                throw new MoodAnalyzer_CustomException(MoodAnalyzer_CustomException.ExceptionType.NUll_MESSAGE, "Message can not be NULL!!");
             }
 
         }
 
     }
 }
+
+
+
+
+
